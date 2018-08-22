@@ -26,6 +26,7 @@ class DialogInput extends React.Component{
         visible={this.props.isDialogVisible}
       	onRequestClose={() => {
       	  this.props.closeDialog();
+	  this.setState({inputModal:''});
       	}}>
         <View style={[styles.container, {...modalStyleProps}]}>
           <View style={[styles.modal_container, {...dialogStyleProps}]}>
