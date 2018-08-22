@@ -7,6 +7,9 @@ class DialogInput extends React.Component{
     super(props);
     this.state = {inputModal:''}
   }
+	componentWillReceiveProps(nextProps) {
+    if (!this.props.isDialogVisible && nextProps.isDialogVisible)  this.setState({inputModal:''});
+  }
   render(){
     let title = this.props.title || '';
     let hintInput = this.props.hintInput || '';
