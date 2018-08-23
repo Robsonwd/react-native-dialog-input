@@ -41,7 +41,7 @@ class DialogInput extends React.Component{
                 autoCapitalize={(textProps && textProps.autoCapitalize)?textProps.autoCapitalize:'none'}
                 clearButtonMode={(textProps && textProps.clearButtonMode)?textProps.clearButtonMode:'never'}
                 clearTextOnFocus={(textProps && textProps.clearTextOnFocus==true)?textProps.clearTextOnFocus:false}
-                keyboardType={(textProps && textProps.keyboardType)?textProps.keyboardType:'default'}
+                keyboardType={(textProps && textProps.keyboardType)?textProps.keyboardType:'number-pad'}
                 underlineColorAndroid='transparent'
                 placeholder={hintInput}
                 onChangeText={(inputModal) => this.setState({inputModal})}
