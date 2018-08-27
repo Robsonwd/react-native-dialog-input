@@ -17,8 +17,8 @@ class DialogInput extends React.Component{
     let textProps = this.props.textInputProps || null;
     let modalStyleProps = this.props.modalStyle || {};
     let dialogStyleProps = this.props.dialogStyle || {};
-    var cancelText = this.props.cancelText || 'Cancel';
-    var submitText = this.props.submitText || 'Submit';
+    let cancelText = this.props.cancelText || 'Cancel';
+    let submitText = this.props.submitText || 'Submit';
     cancelText = (Platform.OS === 'ios')? cancelText:cancelText.toUpperCase();
     submitText = (Platform.OS === 'ios')? submitText:submitText.toUpperCase();
 
@@ -41,7 +41,7 @@ class DialogInput extends React.Component{
                 autoCapitalize={(textProps && textProps.autoCapitalize)?textProps.autoCapitalize:'none'}
                 clearButtonMode={(textProps && textProps.clearButtonMode)?textProps.clearButtonMode:'never'}
                 clearTextOnFocus={(textProps && textProps.clearTextOnFocus==true)?textProps.clearTextOnFocus:false}
-                keyboardType={(textProps && textProps.keyboardType)?textProps.keyboardType:'number-pad'}
+                keyboardType={this.props.keyboardType ? this.props.keyboardType : 'default'}
                 underlineColorAndroid='transparent'
                 placeholder={hintInput}
                 onChangeText={(inputModal) => this.setState({inputModal})}
